@@ -2,6 +2,12 @@
 
 Turn your daily Claude Code sessions into passive English immersion and PTE (Pearson Test of English) exam prep.
 
+> Created by [Roland Wong](https://github.com/rolandwonglonam). The skill architecture, learning methodology, error taxonomy, PTE absorption mechanism, and Wittgenstein-style teaching framework were designed and iterated by Roland through daily use. Claude assisted with implementation and documentation.
+
+**[中文说明](#中文说明) | [English](#what-this-is)**
+
+---
+
 ## What This Is
 
 Two Claude Code skills that work together:
@@ -133,6 +139,49 @@ data/                       ← Your persistent data (lives in your vault/notes)
 4. When Claude replies, it silently demonstrates the least-hit rules in natural phrasing
 5. After 3 spontaneous hits, a rule graduates to "mastered"
 6. Weekly reports track absorption progress
+
+---
+
+## 中文说明
+
+### 这是什么
+
+两个 Claude Code skill，把你每天跟 Claude 对话的时间变成英语沉浸式学习 + PTE 备考。
+
+核心逻辑很简单：你本来就每天跟 Claude 聊天，把对话语言切成英文，每天就多了几个小时的被动输入，不需要额外花时间。
+
+### 为什么做这个
+
+我（Roland）住在澳洲，需要考 PTE 但没时间专门学。试过各种英语 App，全部坚持不了——因为它们是「额外任务」。后来想到一个事：我每天跟 Claude Code 工作好几个小时，如果这些对话全用英文，那我每天的英语输入量就够了。
+
+关键设计决策：
+- **不逐句纠错**。每句都纠正会让人烦到关掉。错误静默记录，session 结束时批量复盘
+- **维特根斯坦式教词**。不给中文翻译，用「什么场景下用」+「一个例句」+「跟近义词的区别」来教。记得更牢
+- **PTE 规则被动吸收**。从 YouTube 老师视频里提取考试技巧，Claude 在日常回复里悄悄示范这些技巧，你不知不觉就学会了
+- **考试日期越近，示范越密**。滑动锚点机制，离考试越近 Claude 回复里塞的 PTE 技巧越多
+
+### 安装
+
+1. 把 `english-immersion/` 和 `pte/` 复制到 `~/.claude/skills/`
+2. 把 `data-template/` 复制到你的笔记目录（Obsidian vault 或任何持久化位置）
+3. 修改两个 `SKILL.md` 里的 `data/` 路径，指向你实际的数据目录
+4. 在 `english-immersion/SKILL.md` 第 10 行填入你的个人信息（所在地、目标分、当前水平、时间线）
+
+### 使用
+
+```
+"english mode on"     → 开启英语模式
+"english mode off"    → 关闭
+/pte feed <文稿>      → 喂 PTE 老师的视频文稿，自动提取规则
+/pte status           → 查看吸收进度
+/pte-essay [话题]     → 主动练习写作（可选，不强制）
+```
+
+### 作者
+
+由 [Roland Wong](https://github.com/rolandwonglonam) 设计和创造。整个 skill 的架构设计、学习方法论、错误分类体系、PTE 被动吸收机制、维特根斯坦式教学框架，都是 Roland 在日常使用中反复迭代出来的。Claude 负责实现和文档化。
+
+---
 
 ## License
 
