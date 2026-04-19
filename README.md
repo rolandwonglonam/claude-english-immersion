@@ -2,7 +2,7 @@
 
 Turn your daily Claude Code sessions into passive English immersion and PTE (Pearson Test of English) exam prep.
 
-> Created by [Roland Wong](https://github.com/rolandwonglonam). The skill architecture, learning methodology, error taxonomy, PTE absorption mechanism, and Wittgenstein-style teaching framework were designed and iterated by Roland through daily use. Claude assisted with implementation and documentation.
+> Created by [Roland Wayne](https://github.com/rolandwonglonam). The skill architecture, learning methodology, error taxonomy, PTE absorption mechanism, and Wittgenstein-style teaching framework were designed and iterated by Roland through daily use. Claude assisted with implementation and documentation.
 
 **[中文说明](#中文说明) | [English](#what-this-is)**
 
@@ -179,7 +179,24 @@ Vibe coding 时代，开发者每天跟 Claude Code 对话好几个小时。这�
 
 ### 作者
 
-由 [Roland Wong](https://github.com/rolandwonglonam) 设计和创造。整个 skill 的架构设计、学习方法论、错误分类体系、PTE 被动吸收机制、维特根斯坦式教学框架，都是 Roland 在日常使用中反复迭代出来的。Claude 负责实现和文档化。
+由 [Roland Wayne](https://github.com/rolandwonglonam) 设计和创造。整个 skill 的架构设计、学习方法论、错误分类体系、PTE 被动吸收机制、维特根斯坦式教学框架，都是 Roland 在日常使用中反复迭代出来的。Claude 负责实现和文档化。
+
+---
+
+## Roadmap / 开发预留
+
+This is a functional but intentionally incomplete release. The architecture is designed to be extended. Here are some directions you can take it:
+
+这是一个可用但刻意未做完的版本，架构预留了扩展空间。你可以根据自己的需要继续开发：
+
+- **More language support** — The framework is language-agnostic. Swap PTE for IELTS, TOEFL, JLPT, DELF, or any other exam by replacing the rubrics and methodology rules
+- **Listening / speaking integration** — Current limitation: Claude can't hear audio. If you find a way to pipe speech-to-text into the conversation, the error taxonomy and absorption mechanism work out of the box
+- **Spaced repetition** — `words_learned.md` is a flat file. Wire it into Anki or any SRS system for better retention
+- **Multi-user** — Currently single-user. Add a user ID to the data files to support teams or classrooms
+- **Analytics dashboard** — The data is all in Markdown. Build a visualization layer on top of `errors_tagged.md` and `absorption_log.md`
+- **Auto-generated practice** — Use the error patterns to automatically generate targeted exercises (e.g., if `missing-be-verb` keeps recurring, generate fill-in-the-blank drills)
+
+PRs and forks welcome.
 
 ---
 
